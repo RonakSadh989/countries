@@ -1,0 +1,108 @@
+:root {
+  --Dark-Blue-Dark-Mode-Elements: hsl(209, 23%, 22%);
+  --Very-Dark-Blue-Dark-Mode-Background: hsl(207, 26%, 17%);
+  --Very-Dark-Blue-Light-Mode-Text: hsl(200, 15%, 8%);
+  --Dark-Gray-Light-Mode-Input: hsl(0, 0%, 52%);
+  --Very-Light-Gray-Light-Mode-Background: hsl(0, 0%, 98%);
+  --White-Dark-Mode-Text-Light-Mode-Elements: hsl(0, 0%, 100%);
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.back,
+.country > div:last-child p {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 7vw;
+  height: 5vh;
+  margin-bottom: 5vh;
+  border-radius: 5px;
+  background-color: inherit;
+  box-shadow: 0px 0px 5px 3px rgb(184, 184, 184);
+  border: none;
+}
+.back button {
+  background-color: inherit;
+  border: none;
+  font-weight: 600;
+}
+main {
+  padding: 5vh 5vw 7vh 5vw;
+}
+.info-div {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.info-div img {
+  height: 50vh;
+  padding: 0 5vw 0 0;
+}
+.country {
+  background-color: inherit;
+  box-shadow: none;
+  width: 100%;
+  padding-top: 5vh;
+}
+.country .grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 0.5em;
+}
+.country > p:first-child {
+  font-size: 2em;
+}
+.country span {
+  font-size: 1.1em;
+}
+.country .grid > div > p {
+  display: inline;
+}
+.country > div:last-child {
+  margin-top: 5vh;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+.country > div:last-child > div {
+  gap: 0.5em;
+  display: flex;
+}
+.country > div:last-child p {
+  border-radius: 2px;
+  box-shadow: none;
+  outline: 1.5px solid lightgray;
+  margin: 0;
+}
+br {
+  display: none;
+}
+
+@media screen and (max-width: 500px) {
+  .back {
+    width: 25%;
+  }
+  .info-div {
+    grid-template-columns: 1fr;
+  }
+  .info-div img {
+    width: 100%;
+    height: auto;
+  }
+  .country .grid {
+    grid-template-columns: 1fr;
+  }
+  .country > div:last-child {
+    align-items: baseline;
+    flex-direction: column;
+  }
+  .country > div:last-child p {
+    width: 40%;
+  }
+  .country > div:last-child > div {
+    width: 90%;
+    margin: 2vh auto;
+  }
+}

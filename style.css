@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap");
+
+:root {
+  --Dark-Blue-Dark-Mode-Elements: hsl(209, 23%, 22%);
+  --Very-Dark-Blue-Dark-Mode-Background: hsl(207, 26%, 17%);
+  --Very-Dark-Blue-Light-Mode-Text: hsl(200, 15%, 8%);
+  --Dark-Gray-Light-Mode-Input: hsl(0, 0%, 52%);
+  --Very-Light-Gray-Light-Mode-Background: hsl(0, 0%, 98%);
+  --White-Dark-Mode-Text-Light-Mode-Elements: hsl(0, 0%, 100%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Nunito Sans", sans-serif;
+  /* outline: 1px solid lightgreen; */
+}
+body {
+  background-color: var(--Very-Light-Gray-Light-Mode-Background);
+}
+nav {
+  display: flex;
+  padding: 3vh 5vw;
+  background-color: var(--White-Dark-Mode-Text-Light-Mode-Elements);
+}
+nav > p {
+  font-weight: 800;
+  font-size: 1.3em;
+}
+nav .mode {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  margin-left: auto;
+  font-weight: 600;
+}
+nav .mode i {
+  transform: rotate(-25deg);
+}
+.search {
+  display: flex;
+  justify-content: space-between;
+  padding: 4vh 5vw;
+  position: relative;
+}
+.search input,
+.search select {
+  height: 8vh;
+  width: 30%;
+  padding-left: 3%;
+  background-color: var(--White-Dark-Mode-Text-Light-Mode-Elements);
+  border-radius: 4px;
+  border: 0;
+  font-size: 600;
+  box-shadow: 6px 6px 19px #cacaca, -6px -6px 19px #f6f6f6;
+}
+.search select {
+  width: 15%;
+}
+
+
+.country-div {
+  display: grid;
+  place-items: center;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  column-gap: 2em;
+  row-gap: 5em;
+  padding: 5vh 5vw 7vh 5vw;
+}
+
+.country {
+  height: fit-content;
+  border-radius: 8px;
+  width: 20vw;
+  min-height: 55vh;
+  background-color: var(--White-Dark-Mode-Text-Light-Mode-Elements);
+  padding-bottom: 7vh;
+  font-size: 0.8em;
+  box-shadow: 10px 10px 13px #cacaca, -10px -10px 13px #f6f6f6;
+}
+.country img {
+  height: 27.5vh;
+  border-radius: 8px 8px 0 0;
+  width: 100%;
+}
+.country .info {
+  padding-left: 8%;
+}
+.info > p:first-child {
+  font-weight: 800;
+  margin: 2vh 0;
+  font-size: 1.5em;
+  display: block;
+}
+.country span {
+  font-weight: 600;
+}
+.info p {
+  display: inline;
+}
+
+@media screen and (max-width: 500px) {
+  nav > p {
+    font-size: 1em;
+  }
+  .search {
+    flex-direction: column;
+    gap: 2em;
+  }
+  .search input {
+    width: 95%;
+    margin: 0 auto;
+  }
+  .search select {
+    width: 40%;
+    margin-left: 2vw;
+    padding-right: 5vw;
+  }
+  .country-div {
+    grid-template-columns: 1fr;
+  }
+  .country {
+    width: 80%;
+  }
+}
